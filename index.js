@@ -17,6 +17,11 @@ const productRoutes = require('./routes/product');
 // Database connection
 connectDB();
 
+// Set rejectUnauthorized globally for all https requests in development
+if (process.env.NODE_ENV === 'development') {
+    https.globalAgent.options.rejectUnauthorized = false;
+}
+
 app.use(cors());
 
 app.use(bodyParser.json());
