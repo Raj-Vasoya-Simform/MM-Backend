@@ -12,7 +12,7 @@ const profileRoutes = require('./routes/profile');
 const categoryRoutes = require('./routes/category');
 const historyRoutes = require('./routes/history');
 const productRoutes = require('./routes/product');
-// require('dotenv').config();
+require('dotenv').config();
 
 // Database connection
 connectDB();
