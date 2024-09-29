@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 
 const connectDB = async () => {
     try {
-        mongoose.connect('mongodb://localhost:27017/admin', {
+        mongoose.connect(process.env.mongoUrl, {
             useNewUrlParser: true,
             useUnifiedTopology: true
         });
