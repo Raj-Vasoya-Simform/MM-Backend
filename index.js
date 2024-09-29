@@ -26,12 +26,6 @@ app.use(cors());
 
 app.use(bodyParser.json());
 
-// Serve static Angular files
-app.use(express.static(path.join(__dirname, 'dist/front-end')));
-app.get('/*', function(req, res) {
-  res.sendFile(path.join(__dirname, 'dist/front-end/index.html'));
-});
-
 // Routes
 app.use('/', authRoutes);
 app.use('/order', orderRoutes);
